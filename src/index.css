@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* ================================
+   GLOBAL TYPOGRAPHY
+================================ */
+
+.global-eyebrow {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.global-heading {
+  margin-top: 12px;
+  font-size: 34px;
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+.global-heading-highlight {
+  color: #2563eb;
+}
+
+.global-heading-description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (min-width: 640px) {
+  .global-heading {
+    font-size: 40px;
+  }
+
+  .global-heading-description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .global-heading {
+    font-size: 44px;
+  }
+}
+
+/* ================================
+   GLOBAL
+================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #2563eb;
+  color: #ffffff;
+}
+/* =====================================================
+   TRUSTED CLIENTS - SLOW CONTINUOUS SLIDER
+===================================================== */
+
+.client-slider {
+  animation: clientSlide 45s linear infinite;
+  will-change: transform;
+}
+
+.client-slider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes clientSlide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
