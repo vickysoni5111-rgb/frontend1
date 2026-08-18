@@ -12,6 +12,12 @@ import {
   X,
 } from "lucide-react";
 
+// Safe API configuration supporting both Vite and Create React App
+const API_URL = 
+  (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_API_URL) || 
+  (typeof process !== "undefined" && process.env && process.env.REACT_APP_API_URL) || 
+  "http://localhost:5000/api";
+
 const initialFormData = {
   name: "",
   phone: "",
@@ -48,7 +54,7 @@ const EnquiryForm = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/enquiry",
+        `${API_URL}/enquiry`,
         {
           method: "POST",
           headers: {

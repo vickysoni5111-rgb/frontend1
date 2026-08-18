@@ -31,7 +31,7 @@ const AIAssistant = () => {
   const [messages, setMessages] = useState([
     {
       sender: "bot",
-      text: "Hi there! 👋 Welcome to   Pawanputra  Entrrprises PVT LTD. What should we call you?",
+      text: "Hi there! 👋 Welcome to Pawanputra Enterprises PVT LTD. What should we call you?",
     },
   ]);
 
@@ -86,7 +86,6 @@ const AIAssistant = () => {
     setMessages(updatedMessages);
     setInput("");
 
-    // Update form data based on current step
     let updatedData = { ...formData };
     if (step === 0) updatedData.name = userText;
     else if (step === 1) updatedData.email = userText;
@@ -102,7 +101,6 @@ const AIAssistant = () => {
       setStep(nextStep);
       setLoading(true);
 
-      // Dynamic questions using the user's name
       const userName = updatedData.name;
       let nextQuestion = "";
 
@@ -124,10 +122,11 @@ const AIAssistant = () => {
         setLoading(false);
       }, 500);
     } else {
-      // Submit Data to Backend
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/api/enquiry", {
+        const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
+        const response = await fetch(`${backendUrl}/api/enquiry`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -172,7 +171,6 @@ const AIAssistant = () => {
 
   return (
     <>
-      {/* Floating Button */}
       {!open && (
         <div className="fixed bottom-6 right-6 z-[950] sm:bottom-8 sm:right-8">
           <div className="absolute -top-10 right-0 whitespace-nowrap rounded-full border border-amber-500/30 bg-neutral-900 px-3 py-1 text-[10px] font-bold tracking-wider text-amber-400 shadow-xl backdrop-blur-md animate-bounce">
@@ -193,7 +191,6 @@ const AIAssistant = () => {
         </div>
       )}
 
-      {/* Chat Window Popup */}
       {open && (
         <div
           className="fixed inset-0 z-[1000] flex items-end justify-center bg-black/60 p-3 backdrop-blur-sm sm:items-end sm:justify-end sm:p-6"
@@ -203,7 +200,6 @@ const AIAssistant = () => {
             onClick={(e) => e.stopPropagation()}
             className="flex h-[520px] w-full max-w-[400px] flex-col overflow-hidden rounded-3xl border border-neutral-800 bg-[#fbf9f5] shadow-2xl transition-all animate-in fade-in slide-in-from-bottom-5 duration-300"
           >
-            {/* Header */}
             <div className="relative flex items-center justify-between bg-neutral-950 px-5 py-3.5 text-white">
               <div className="flex items-center gap-3">
                 <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-amber-400 text-neutral-950 shadow-md">
@@ -230,7 +226,6 @@ const AIAssistant = () => {
               </button>
             </div>
 
-            {/* Success Screen */}
             {success ? (
               <div className="flex flex-1 flex-col items-center justify-center p-6 text-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400 text-neutral-950 shadow-lg shadow-amber-400/20">
@@ -263,7 +258,6 @@ const AIAssistant = () => {
               </div>
             ) : (
               <>
-                {/* Chat Messages Body */}
                 <div className="flex-1 overflow-y-auto p-4 space-y-3">
                   {messages.map((msg, idx) => (
                     <div
@@ -307,12 +301,11 @@ const AIAssistant = () => {
                   <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input Footer */}
                 <div className="shrink-0 border-t border-neutral-200 bg-white p-3">
                   <div className="flex items-center gap-2">
                     <input
                       autoFocus
-                      type={step === 1 ? "email" : step === 2 ? "tel" : "text"}
+                      type={step === 1 ? "email" : "text"}
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={(e) => {
