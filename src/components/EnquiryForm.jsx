@@ -12,11 +12,11 @@ import {
   X,
 } from "lucide-react";
 
-// Safe API configuration supporting both Vite and Create React App
+// Safe API configuration pointing directly to your Render backend
 const API_URL = 
-  (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_API_URL) || 
+  (typeof import.meta !== "undefined" && import.meta.env && (import.meta.env.VITE_API_URL || import.meta.env.VITE_BACKEND_URL)) || 
   (typeof process !== "undefined" && process.env && process.env.REACT_APP_API_URL) || 
-  "http://localhost:5000/api";
+  "https://backend1-pew7.onrender.com/api";
 
 const initialFormData = {
   name: "",
@@ -618,7 +618,7 @@ const Input = ({
           name={name}
           placeholder={placeholder}
           value={value}
-          onChange={onChange}
+          onChange={handleChange}
           required={required}
           className="
             h-[50px]
