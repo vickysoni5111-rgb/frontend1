@@ -124,9 +124,9 @@ const AIAssistant = () => {
     } else {
       setLoading(true);
       try {
-        const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+        const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
-        const response = await fetch(`${backendUrl}/api/enquiry`, {
+        const response = await fetch(`${backendUrl}/enquiry`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
