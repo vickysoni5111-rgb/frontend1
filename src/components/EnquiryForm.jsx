@@ -571,7 +571,7 @@ const EnquiryForm = () => {
 
 
 // ======================================================
-// INPUT COMPONENT
+// INPUT COMPONENT (Added onChange prop here)
 // ======================================================
 
 const Input = ({
@@ -618,7 +618,7 @@ const Input = ({
           name={name}
           placeholder={placeholder}
           value={value}
-          onChange={handleChange}
+          onChange={onChange}
           required={required}
           className="
             h-[50px]
