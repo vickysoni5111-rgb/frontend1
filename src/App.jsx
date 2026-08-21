@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import CompanyProfile from "./components/CompanyProfile";
 
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -41,6 +42,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/gallery" element={<Gallery />} />
+     
+<Route path="/profile" element={<CompanyProfile />} />
 
             {/* Wrong URL */}
             <Route

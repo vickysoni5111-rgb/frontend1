@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
@@ -47,6 +46,10 @@ const navItems = [
   {
     name: "About",
     path: "/about",
+  },
+  {
+    name: "Profile",
+    path: "/profile",
   },
   {
     name: "Services",
@@ -172,7 +175,6 @@ const Navbar = () => {
                       }`
                     }
                   >
-
                     {({ isActive }) => (
                       <>
                         <span>{item.name}</span>
