@@ -323,21 +323,21 @@ const Contact = () => {
               </span>
               <h2 className="mt-3 text-3xl font-black text-slate-900 sm:text-4xl">
                 Visit Us in
-                <span className="text-[#b58a00]"> Railmagra.</span>
+                <span className="text-[#b58a00]">Pawanputra.</span>
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500">
                 Railmagra, District: Rajsamand (Rajasthan), Pin: 313329
               </p>
             </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Railmagra%2C%20Rajsamand%2C%20Rajasthan%20313329"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#171714] px-5 py-3 text-xs font-extrabold text-white"
-            >
-              Open in Google Maps
-              <Navigation size={15} />
-            </a>
+          <a
+  href="https://maps.app.goo.gl/1e8GB1RSAGFeA3Xj9?g_st=iw"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#171714] px-5 py-3 text-xs font-extrabold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#b58a00]"
+>
+  Open Exact Location
+  <Navigation size={15} />
+</a>
           </div>
 
           <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 shadow-xl">

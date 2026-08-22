@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import mainImage from "../assets/mainpagepic1.png";
-
+import { Link } from "react-router-dom";
 const FinalCTA = () => {
   const features = [
     "Professional Execution",
@@ -101,13 +101,12 @@ const FinalCTA = () => {
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </a>
-
-              <a
-                href="/services"
-                className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-5 py-3 text-[11px] font-bold text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-yellow-300 hover:bg-yellow-50 hover:text-yellow-700"
-              >
-                Explore Services
-              </a>
+<Link
+  to="/services"
+  className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-5 py-3 text-[11px] font-bold text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-yellow-300 hover:bg-yellow-50 hover:text-yellow-700"
+>
+  Explore Services
+</Link>
             </div>
           </div>
 

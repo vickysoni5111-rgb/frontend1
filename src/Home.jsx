@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TrustStats from "./components/TrustStats";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 import FinalCTA from "./components/FinalCTA";
 import ProjectCard from "./components/ProjectCard";
@@ -360,13 +361,13 @@ const Home = () => {
               on delivering work with functionality and durability.
             </p>
 
-            <a
-              href="/about"
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3 text-xs font-black text-yellow-400 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
-            >
-              Discover More
-              <span>→</span>
-            </a>
+         <Link
+  to="/about"
+  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3 text-xs font-black text-yellow-400 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+>
+  Discover More
+  <span>→</span>
+</Link>
           </div>
 
           {/* IMAGE */}
