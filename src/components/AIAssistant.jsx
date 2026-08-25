@@ -43,21 +43,11 @@ const AIAssistant = () => {
     scrollToBottom();
   }, [messages, loading]);
 
+  // Automatically close if path changes, but do NOT auto-open on load anymore
   useEffect(() => {
     if (location.pathname !== "/") {
       setOpen(false);
-      return;
     }
-
-    const alreadyOpened = sessionStorage.getItem("pawanputra_ai_opened");
-    if (alreadyOpened) return;
-
-    const timer = setTimeout(() => {
-      setOpen(true);
-      sessionStorage.setItem("pawanputra_ai_opened", "true");
-    }, 1400);
-
-    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   const validateInput = (currentStepIndex, value) => {
