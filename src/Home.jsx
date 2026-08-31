@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TrustStats from "./components/TrustStats";
 import AOS from "aos";
 import { Link } from "react-router-dom";
+import SEO from "./components/SEO"; // <-- Yahan SEO component import kiya hai
 
 import FinalCTA from "./components/FinalCTA";
 import ProjectCard from "./components/ProjectCard";
@@ -178,6 +179,15 @@ const Home = () => {
 
   return (
     <main className="overflow-hidden bg-[#faf9f4] text-slate-900">
+      {/* ==================================================
+          SEO COMPONENT (Targeting Pawan Putra Enterprises & Best Construction Website)
+      ================================================== */}
+      <SEO 
+        title="Home | Best Construction & Development Company"
+        description="Pawan Putra Enterprises is the best construction website and development company in Rajasthan, offering heavy material supply, machinery, road construction, and civil engineering."
+        keywords="Pawan Putra Enterprises, best construction website, construction company, building development, heavy machinery supply, Rajasthan construction"
+      />
+
       {/* ==================================================
           HERO
       ================================================== */}
@@ -361,7 +371,7 @@ const Home = () => {
               on delivering work with functionality and durability.
             </p>
 
-         <Link
+           <Link
   to="/about"
   className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-3 text-xs font-black text-yellow-400 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
 >
