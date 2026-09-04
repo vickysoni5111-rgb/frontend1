@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://frontend1-five-red.vercel.app/sitemap.xml
+Sitemap: https://pawanputrapvltltd.com/sitemap.xml
