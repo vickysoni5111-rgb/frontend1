@@ -91,34 +91,34 @@ const LeadershipTeam = () => {
               {/* Yellow Top Line */}
               <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-60 transition-all duration-500 group-hover:opacity-100" />
 
-              {/* =================================================
-                  IMAGE
-              ================================================= */}
+             {/* =================================================
+    IMAGE
+================================================= */}
 
-              <div className="relative h-[350px] overflow-hidden bg-zinc-900 sm:h-[380px]">
+<div className="relative aspect-[3/4] w-full overflow-hidden bg-zinc-900 sm:aspect-[4/5]">
 
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                />
+  <img
+    src={leader.image}
+    alt={leader.name}
+    className="h-full w-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-105"
+  />
 
-                {/* Soft Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent" />
+  {/* Soft Overlay - halka rakha taaki pic clearly dikhe */}
+  <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/90 via-transparent to-transparent" />
 
-                {/* Role Badge */}
-                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3.5 py-2 backdrop-blur-md">
-                  <BriefcaseBusiness
-                    size={13}
-                    className="text-yellow-400"
-                  />
+  {/* Role Badge */}
+  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/60 px-3.5 py-2 backdrop-blur-md">
+    <BriefcaseBusiness
+      size={13}
+      className="text-yellow-400"
+    />
 
-                  <span className="text-[9px] font-extrabold uppercase tracking-[0.16em] text-white">
-                    {leader.role}
-                  </span>
-                </div>
+    <span className="text-[9px] font-extrabold uppercase tracking-[0.16em] text-white">
+      {leader.role}
+    </span>
+  </div>
 
-              </div>
+</div>
 
               {/* =================================================
                   CONTENT

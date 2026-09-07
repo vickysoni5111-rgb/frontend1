@@ -69,19 +69,19 @@ const YoutubeIcon = ({ size = 17 }) => (
 const socialLinks = [
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/raman_sharma_railmagra?stkn=MWZoNTZnbzlwdTZlNA%3D%3D&utm_source=qr",
     Icon: InstagramIcon,
     hoverColor: "#E1306C",
   },
   {
     name: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/Raman.sharma.23?mibextid=wwXIfr&rdid=rtLp9RaPiJj3bUzX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1dwccgVCCG%2F%3Fmibextid%3DwwXIfr#",
     Icon: FacebookIcon,
     hoverColor: "#1877F2",
   },
   {
     name: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@ramansharmavlogs8",
     Icon: YoutubeIcon,
     hoverColor: "#FF0000",
   },
@@ -243,6 +243,8 @@ const Footer = () => {
                   <a
                     key={name}
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={name}
                     style={{
                       "--hover-color": hoverColor,

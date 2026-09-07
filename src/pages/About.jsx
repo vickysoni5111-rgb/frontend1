@@ -267,16 +267,16 @@ const About = () => {
 
               <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white p-2 shadow-2xl shadow-black/10">
 
-                <div className="group relative h-[400px] overflow-hidden rounded-[22px] bg-slate-100 sm:h-[540px]">
+                <div className="group relative h-[420px] overflow-hidden rounded-[22px] bg-slate-100 sm:h-[560px]">
 
                   <img
                     src={truckloadImage}
                     alt="Pawanputra Enterprises construction work"
-                    className="h-full w-full object-contain object-center transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                    className="h-full w-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                   />
 
-                  {/* Very light overlay only at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/65 to-transparent" />
+                  {/* Light overlay only at bottom for text readability */}
+                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                   <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
 
@@ -424,7 +424,7 @@ const About = () => {
           </div>
 
         </div>
-<LeadershipTeam />
+        <LeadershipTeam />
       </section>
 
 
